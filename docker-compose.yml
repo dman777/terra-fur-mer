@@ -7,15 +7,16 @@ services:
     working_dir: /app
     volumes:
       # mount hist file to keep cli history
-      - /home/two/.docker_zsh_history:/app/.docker_zsh_history
+      # - /home/user/.docker_zsh_history:/app/.docker_zsh_history
+      #
       # mount your proj to /app
-      # /home/user/project:/app
+      # - /home/user/project:/app
       #
       # mount your ssh key if needed
-      # ~/.ssh/id_rsa:/root/.ssh/id_rsa
+      # - /home/user/.ssh/id_rsa:/root/.ssh/id_rsa
       #
-      # mount your terraform sate
-      - /home/two/.terraform.d:/root/.terraform.d
+      # mount your terraform dir
+      # - /home/two/.terraform.d:/root/.terraform.d
     environment:
       # key cli history for convience
       HISTFILE: /app/.docker_zsh_history
