@@ -1,0 +1,23 @@
+services:
+  terra-fur-mer:
+    build:
+      context: .
+      no_cache: true
+    container_name: terra-fur-mer
+    working_dir: /app
+    volumes:
+      # mount hist file to keep cli history
+      - /home/two/.docker_zsh_history:/app/.docker_zsh_history
+      # mount your proj to /app
+      # /home/user/project:/app
+      #
+      # mount your ssh key if needed
+      # ~/.ssh/id_rsa:/root/.ssh/id_rsa
+      #
+      # mount your terraform sate
+      - /home/two/.terraform.d:/root/.terraform.d
+    environment:
+      # key cli history for convience
+      HISTFILE: /app/.docker_zsh_history
+    entrypoint: [ "/usr/bin/zsh", "-l" ]
+

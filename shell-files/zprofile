@@ -1,0 +1,5 @@
+clear;
+echo '\n';
+chafa /root/plink-cat-blink.gif -d 1 --speed 2.0 --scale=3
+echo '\nWelcome to terra-fur-mer!\n'
+
