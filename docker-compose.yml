@@ -16,7 +16,7 @@ services:
       # - /home/user/.ssh/id_rsa:/root/.ssh/id_rsa
       #
       # mount your terraform dir
-      # - /home/two/.terraform.d:/root/.terraform.d
+      # - /home/user/.terraform.d:/root/.terraform.d
     environment:
       # key cli history for convience
       HISTFILE: /app/.docker_zsh_history
